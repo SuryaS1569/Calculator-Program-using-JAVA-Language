@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter First numbers: ");
+        int a = sc.nextInt();
+        System.out.print("Enter Second numbers: ");
+        int b = sc.nextInt();
+        
+        System.out.println("Choose operation: 1. Addition, 2. Subtraction, 3. Multiplication, 4. Division");
+        int c = sc.nextInt();
+        
+        int z = 0;
+        
+        switch (c) {
+            case 1:
+                z = a + b;
+                break;
+            case 2:
+                z = a - b;
+                break;
+            case 3:
+                z = a * b;
+                break;
+            case 4:
+                if (b != 0) {
+                    z = a / b;
+                } else {
+                    System.out.println("Cannot divide by zero.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Invalid choice.");
+                return;
+        }
+
+        System.out.println("Result: " + z);
+    }
+}
+
+
